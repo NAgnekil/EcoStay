@@ -31,23 +31,19 @@ Text: "EcoStay erbjuder unika boenden i natursköna miljöer. Vårt mål är att
 <i>Boenden-sidan:</i><br>
 Boende 1: Skogsstugan<br>
 En mysig stuga i hjärtat av en skog. Här bor du mitt i naturen med tillgång till vandringsleder och sjöar.<br>
-Pris: 1 500 kr/natt<br>
-Bild: En stuga i en grön skog med en liten stig framför.<br>
+Pris: 1 500 kr/natt
 
 Boende 2: Sjöstugan<br>
 Ligger precis vid en sjö med egen brygga. Perfekt för dig som vill bada eller fiska.<br>
-Pris: 2 000 kr/natt<br>
-Bild: En liten stuga vid en sjö med en träbrygga.<br>
+Pris: 2 000 kr/natt
 
 Boende 3: Fjällhyddan<br>
 Högt uppe i de svenska fjällen. Spektakulär utsikt och äventyr runt varje hörn.<br>
-Pris: 2 500 kr/natt<br>
-Bild: En hydda med fjäll i bakgrunden.<br>
+Pris: 2 500 kr/natt
 
 Boende 4: Ekologiskt Tiny House<br>
 Litet men funktionellt, placerat i en frodig skogsglänta. Fullt utrustat och miljövänligt byggt.<br>
-Pris: 1 200 kr/natt<br>
-Bild: Ett tiny house omgivet av träd och grönska.<br>
+Pris: 1 200 kr/natt
 
 <i>Om oss-sidan:</i><br>
 Rubrik: "Om EcoStay"<br>
