@@ -33,19 +33,14 @@ body {
   h2 {
     font-size: 1.5rem;
   }
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  height: 100%;
   overflow-x: hidden;
   margin: 0;
 }
 
-.logo {
-  width: 5rem;
-}
-
 header {
+  .logo {
+    width: 5rem;
+  }
   background-color: var(--color-pearl);
   display: flex;
   justify-content: center;
@@ -113,14 +108,54 @@ header {
 }
 
 .hero-section {
-  height: 100vh;
+  height: 60vh;
   background: url('assets/hero-image.webp') center no-repeat;
-  background-size: cover;
+  /* background-color: rgba(255, 255, 255, 0.2);
+  background-blend-mode: lighten; */
+  position: relative;
+  h1 {
+    position: absolute;
+    bottom: 60px;
+    padding: 1.5rem 3rem 1.5rem 2rem;
+    background-color: rgb(240, 229, 207, 0.6);
+    color: var(--color-jet);
+    border-radius: 0 4px 4px 0;
+  }
+}
+
+footer {
+  height: auto;
+  background: white;
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  grid-template-areas: 'contact logo socials';
+  place-items: center;
+  .contact {
+    grid-area: 'contact';
+    font-size: 0.9rem;
+  }
+  .logo {
+    width: 10rem;
+    margin: 0.7rem;
+    grid-area: 'logo';
+  }
+  .socials {
+    color: var(--color-dark-spring-green);
+    grid-area: 'socials';
+    i {
+      padding: 0.5rem;
+    }
+  }
 }
 
 @media screen and (min-width: 768px) {
   header {
     nav {
+      .logo {
+        margin-bottom: 0.5rem;
+      }
       width: 80%;
       display: flex;
       margin-right: 1rem;
