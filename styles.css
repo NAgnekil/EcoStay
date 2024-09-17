@@ -19,6 +19,7 @@ html {
 body {
   font-family: Arial, sans-serif;
   color: var(--color-jet);
+  background-color: var(--color-seasalt);
   h1,
   h1,
   h3,
@@ -38,28 +39,27 @@ body {
 }
 
 header {
+  background: url('assets/hero-image.webp') center no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   .logo {
     width: 5rem;
   }
-  background-color: var(--color-pearl);
-  display: flex;
-  justify-content: center;
-  position: sticky;
-  top: 0;
   nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     input {
       display: none;
     }
     .nav-toggle {
       display: none;
     }
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
     #nav-checkbox:checked ~ label.nav-toggle .close {
       display: inline;
+      color: var(--color-dark-spring-green);
     }
     #nav-checkbox:checked ~ .nav-links .nav-menu {
       right: 0;
@@ -68,12 +68,13 @@ header {
       display: none;
     }
     .nav-toggle {
-      color: var(--color-dark-spring-green);
+      color: var(--color-seasalt);
       display: flex;
       position: absolute;
       cursor: pointer;
       margin: 0 1.5rem;
       right: 0;
+      z-index: 2;
       .close {
         display: none;
       }
@@ -87,11 +88,12 @@ header {
       gap: 1.5rem;
       list-style: none;
       position: fixed;
+      top: 0;
       right: 0;
       width: 250px;
       flex-direction: column;
       background-color: var(--color-pearl);
-      padding: 1rem;
+      padding: 3rem 1rem;
       right: -250px;
       transition: all ease-in-out 500ms;
       a {
@@ -108,18 +110,46 @@ header {
 }
 
 .hero-section {
-  height: 60vh;
-  background: url('assets/hero-image.webp') center no-repeat;
+  height: 40vh;
   /* background-color: rgba(255, 255, 255, 0.2);
   background-blend-mode: lighten; */
   position: relative;
   h1 {
     position: absolute;
-    bottom: 60px;
-    padding: 1.5rem 3rem 1.5rem 2rem;
+    bottom: 50px;
+    padding: 1rem 3rem 1rem 1rem;
     background-color: rgb(240, 229, 207, 0.6);
     color: var(--color-jet);
     border-radius: 0 4px 4px 0;
+    font-size: 24px;
+  }
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    max-width: 100%;
+    gap: 1rem;
+    padding: 1rem;
+    .card-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 1rem;
+      max-width: 100%;
+      background-color: var(--color-seasalt);
+      padding: 1rem;
+      border-radius: 10px;
+      img {
+        border-radius: 10px;
+      }
+    }
   }
 }
 
@@ -153,12 +183,11 @@ footer {
 @media screen and (min-width: 768px) {
   header {
     nav {
+      display: flex;
+      margin-right: 1rem;
       .logo {
         margin-bottom: 0.5rem;
       }
-      width: 80%;
-      display: flex;
-      margin-right: 1rem;
       .nav-toggle {
         display: none;
       }
@@ -167,6 +196,7 @@ footer {
         justify-content: space-between;
         align-items: center;
         flex-grow: 1;
+        margin: 0.4rem 4rem 0 4rem;
         ul {
           height: unset;
           display: flex;
@@ -175,19 +205,20 @@ footer {
           position: unset;
           transition: unset;
           width: unset;
-          background-color: var(--color-pearl);
+          background-color: unset;
           padding: 0;
           li {
             a {
               font-size: 1rem;
+              color: var(--color-seasalt);
               &:hover {
-                color: var(--color-cafe-noir);
+                color: var(--color-pearl);
               }
               &::after {
                 content: '';
                 display: block;
                 height: 3px;
-                background: var(--color-cafe-noir);
+                background: var(--color-pearl);
                 width: 0%;
                 transition: all ease-in-out 300ms;
               }
@@ -197,6 +228,22 @@ footer {
             }
           }
         }
+      }
+    }
+  }
+  .hero-section {
+    height: 60vh;
+    h1 {
+      bottom: 60px;
+      padding: 1.5rem 3rem 1.5rem 2rem;
+    }
+  }
+  main {
+    section {
+      padding: 2rem;
+      flex-direction: row;
+      .card-container {
+        max-width: 40%;
       }
     }
   }
